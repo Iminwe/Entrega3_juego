@@ -17,7 +17,12 @@ const OPPONENT_HEIGHT = 5,
     SHOT_SPEED = 20,
     SHOT_PICTURE_PLAYER = "assets/shot1.png",
     SHOT_PICTURE_OPPONENT = "assets/shot2.png",
-    SHOT_WIDTH = 1.5;
+    SHOT_WIDTH = 1.5,
+    SCORE=0,
+    LIVES=3,
+    BOSS_PICTURE = "assets/jefe.png",
+    BOSS_PICTURE_DEAD = "assets/jefe_muerto.png",
+    YOU_WIN_PICTURE = "assets/you_win.png";
 
 function getRandomNumber (range) {
     return Math.floor(Math.random() * range);

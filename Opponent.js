@@ -13,7 +13,7 @@ class Opponent extends Character {
             speed = OPPONENT_SPEED,
             myImageSrc = OPPONENT_PICTURE,
             myImageDeadSrc = OPPONENT_PICTURE_DEAD;
-
+            
         super(game, width, height, x, y, speed, myImageSrc, myImageDeadSrc);
         this.direction = "R"; // Dirección hacia la que se mueve el oponente
         setTimeout(() => this.shoot(), 1000 + getRandomNumber(2500));
@@ -65,11 +65,11 @@ class Opponent extends Character {
     collide() {
         
         if (!this.dead) {
+            this.game.score++;
             setTimeout(() => {
                 this.game.removeOpponent();
             }, 2000);
             super.collide();
         }
-
     }
 }
